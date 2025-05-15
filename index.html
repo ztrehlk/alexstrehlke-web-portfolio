@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Strehlke | Professional Portfolio</title>
+    <style>
+        /* CSS Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #e0e0e0;
+            margin-bottom: 40px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #0066cc;
+        }
+        
+        /* Header Section */
+        header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 60px;
+            gap: 50px;
+        }
+        
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid #e0e0e0;
+            background-color: #eee; /* Placeholder color */
+        }
+        
+        .header-text h1 {
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #000;
+        }
+        
+        .header-text p {
+            font-size: 18px;
+            color: #666;
+            max-width: 600px;
+        }
+        
+        /* Sections */
+        section {
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        section:last-child {
+            border-bottom: none;
+        }
+        
+        h2 {
+            font-size: 28px;
+            font-weight: 500;
+            margin-bottom: 30px;
+            color: #000;
+        }
+        
+        h3 {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        
+        /* Work Experience */
+        .experience-item {
+            margin-bottom: 30px;
+        }
+        
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        
+        .job-title {
+            font-weight: 500;
+        }
+        
+        .date-range {
+            color: #666;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .tech-item {
+            background: #e6f2ff;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #004c99;
+        }
+
+        .company {
+            font-weight: 500;
+            color: #0066cc;
+            margin-bottom: 5px;
+        }
+        
+        /* Projects */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .project-card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            transition: box-shadow 0.3s;
+        }
+        
+        .project-card:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-card h3 {
+            margin-bottom: 10px;
+        }
+        
+        /* Contact Section */
+        .contact-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-links a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        
+        .contact-links a:hover {
+            background: #004c99;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+            }
+            
+            .nav-links {
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Alex Strehlke</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Fortis</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+    
+    <main>
+        <section id="home">
+            <header>
+                <img src="profile-placeholder.jpg" alt="Alex Strehlke" class="profile-image">
+                <div class="header-text">
+                    <h1>Alex Strehlke</h1>
+                    <p>Data engineer and full-stack developer specializing in building scalable systems, automating workflows, and creating user-focused applications. Passionate about solving complex problems through technology.</p>
+                    <div class="contact-info">
+                        <a href="mailto:strehlkea@gmail.com">strehlkea@gmail.com</a>
+                        <!-- <a href="tel:831-278-2525">(831) 278-2525</a> -->
+                        <a href="https://linkedin.com/in/alexstrehlke" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+            </header>
+        </section>
+        
+        <section id="experience">
+            <h2>Experience</h2>
+            
+            <div class="experience-item">
+                <div class="company">Fortis</div>
+                <div class="experience-header">
+                    <span class="job-title">Founder & Developer</span>
+                    <span class="date-range">2024 – Present</span>
+                </div>
+                <p>Created and launched a cross-platform fitness application with social engagement features and advanced analytics capabilities.</p>
+                <div class="tech-stack">
+                    <span class="tech-item">React Native</span>
+                    <span class="tech-item">Python (Django)</span>
+                    <span class="tech-item">PostgreSQL</span>
+                    <span class="tech-item">AWS</span>
+                </div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="company">Nomura Holdings</div>
+                <div class="experience-header">
+                    <span class="job-title">Data Engineer</span>
+                    <span class="date-range">2023 – Present</span>
+                </div>
+                <p>Developed data pipelines and business intelligence solutions to support trading operations and reporting functions.</p>
+                <div class="tech-stack">
+                    <span class="tech-item">Python</span>
+                    <span class="tech-item">SQL</span>
+                    <span class="tech-item">Power BI</span>
+                    <span class="tech-item">Alteryx</span>
+                </div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="company">Kubrick Group</div>
+                <div class="experience-header">
+                    <span class="job-title">Data Consultant</span>
+                    <span class="date-range">2022 – 2023</span>
+                </div>
+                <p>Delivered data engineering and analytics solutions for clients across multiple industries including finance and healthcare.</p>
+                <div class="tech-stack">
+                    <span class="tech-item">Python</span>
+                    <span class="tech-item">Databricks</span>
+                    <span class="tech-item">Docker</span>
+                    <span class="tech-item">Machine Learning</span>
+                </div>
+            </div>
+        </section>
+        
+
+        
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Feel free to reach out for professional inquiries or opportunities:</p>
+            
+            <div class="contact-links">
+                <a href="mailto:strehlkea@gmail.com">Email</a>
+                <a href="https://linkedin.com/in/alexstrehlke" target="_blank">LinkedIn</a>
+                <!-- <a href="tel:831-278-2525">Phone</a> -->
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Alex Strehlke. All rights reserved.</p>
+    </footer>
+</body>
+</html>
