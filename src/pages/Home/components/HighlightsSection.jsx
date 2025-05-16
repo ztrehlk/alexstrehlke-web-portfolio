@@ -21,7 +21,7 @@ function HighlightsSection() {
           <div className="card-content">
             <h3>Experience</h3>
             <p>A quick tour of my roles and experience in data.</p>
-            <a href="experience.html">Learn More</a>
+            <a href="/experience">Learn More</a>
           </div>
         </div>
         <div className="card">
@@ -31,7 +31,7 @@ function HighlightsSection() {
           <div className="card-content">
             <h3>Fortis</h3>
             <p>A social workout app I built with React Native, Django, and AWS.</p>
-            <a href="fortis.html">Learn More</a>
+            <a href="/fortis">Learn More</a>
           </div>
         </div>
         <div className="card">
@@ -41,7 +41,7 @@ function HighlightsSection() {
           <div className="card-content">
             <h3>Projects</h3>
             <p>Side projects, open-source contributions, and tangents.</p>
-            <a href="projects.html">Learn More</a>
+            <a href="/projects">Learn More</a>
           </div>
         </div>
       </div>

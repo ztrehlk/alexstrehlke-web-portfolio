@@ -1,37 +1,51 @@
-// Experience.js
 import React from 'react';
 import TreeDisplay from './components/TreeDisplay';
 import './styles/Experience.css'; 
 import nomuraLogo from './assets/images/nomura.png';
 import kubrickLogo from './assets/images/kubrick.png';
 import oregonLogo from './assets/images/oregon.png';
+import fortisLogo from './assets/images/fortis.png';
 
 const experiences = [
   {
-    title: "Data Engineer at Nomura",
+    organization: "Fortis Workout LLC",
+    title: "Founder / Developer",
+    date: "2024 - Present",
+    description: "Designed and launched a cross-platform fitness app for workout tracking and social engagement. Responsible for full-stack development, user growth, and ongoing feature expansion.",
+    image: fortisLogo,
+    // skills: ["React Native", "Django", "AWS", "UI/UX Design"]
+    features: [
+      "Workout tracking and progress visualization",
+      "Social features for community engagement",
+      "Cross-platform compatibility (iOS and Android)",
+    ]
+  },
+  {
+    organization: "Nomura Holdings",
+    title: "Data Engineer",
     date: "2023 - Present",
-    description: "Developed and maintained data pipelines processing millions of records daily. Optimized ETL processes reducing runtime by 40%.",
+    description: "Focused on building automation workflows and streamlining reporting processes within the Middle Office Transformation team. Delivered analytical solutions through data pipelines, dashboards, and workflow optimization.",
     image: nomuraLogo,
-    // projects: [
-    //   "Real-time trade monitoring system",
-    //   "Data warehouse migration to Snowflake",
-    //   "Automated data quality framework"
-    // ]
+    // skills: ["Python", "SQL", "ETL", "Data Pipelines", "Spark"]
   },
   {
-    title: "Data Consultant at Kubrick",
-    date: "2022 - Present",
-    description: "Consulted for Fortune 500 clients on data strategy and implementation. Led a team of 5 junior consultants.",
+    organization: "Kubrick Group",
+    title: "Data Consultant",
+    date: "2022 - 2023",
+    description: "Consulted on data engineering and analytics projects across industries, supporting both client and internal initiatives. Delivered solutions involving ETL pipelines, ML models, and dashboarding tools.",
     image: kubrickLogo,
+    // skills: ["Data Strategy", "Team Leadership", "Client Consulting"]
   },
   {
-    title: "B.Sc. Computer Science, University of Oregon",
+    organization: "University of Oregon",
+    title: "B.Sc. Economics",
     date: "2019 - 2022",
-    description: "Graduated with honors. Specialized in data systems and machine learning.",
-        image: oregonLogo,
+    description: "Minors in Math and History, with a focus on microeconomic theory and econometrics.",
+    image: oregonLogo,
+    // skills: ["Economics", "Data Analysis", "Machine Learning"],
     projects: [
-      "Thesis on distributed database optimization",
-      "Student government data analysis project"
+      "The Effect of COVID-19 on Domestic Crime: An Analysis of School Closure and Mitigating Effects",
+      "Observing the Impact of Individual Characteristics on access to Employer Sponsored Health Insurance"
     ]
   }
 ];
@@ -41,7 +55,7 @@ const Experience = () => {
         <main className="experience-page">
             <div className="experience-container">
                 <h1>Experience</h1>
-                <p>A visualization of my experience</p>
+                <p className="subtitle">A timeline of my professional journey</p>
                 <TreeDisplay experiences={experiences} />
             </div>
         </main>

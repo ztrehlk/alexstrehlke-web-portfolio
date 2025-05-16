@@ -1,12 +1,11 @@
-/* TreeDisplay.css */
 .tree-container {
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
   margin-top: 40px;
   padding: 40px 0;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  color: #2d3748;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: #1d1d1f;
 }
 
 .tree-line {
@@ -15,8 +14,8 @@
   transform: translateX(-50%);
   top: 0;
   bottom: 0;
-  width: 2px;
-  background: linear-gradient(to bottom, transparent 0%, #6366f1 15%, #6366f1 85%, transparent 100%);
+  width: 1px;
+  background: linear-gradient(to bottom, transparent 0%, #86868b 15%, #86868b 85%, transparent 100%);
   z-index: 1;
 }
 
@@ -24,115 +23,163 @@
   position: relative;
   margin-bottom: 60px;
   z-index: 2;
-  width: calc(50% - 40px);
+  width: calc(50% - 60px);
 }
 
 .tree-node.left {
   left: 0;
-  padding-right: 80px;
-  text-align: right;
+  padding-right: 60px;
 }
 
 .tree-node.right {
-  left: calc(50% + 40px);
-  padding-left: 80px;
-  text-align: left;
+  left: calc(50% + 60px);
+  padding-left: 60px;
 }
 
 .node-circle {
   position: absolute;
-  top: 10px;
-  width: 16px;
-  height: 16px;
+  top: 30px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  background-color: #6366f1;
-  border: 3px solid white;
-  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+.node-circle-inner {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #0071e3;
+  box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.1);
 }
 
 .tree-node.left .node-circle {
-  right: -8px;
+  right: -75px;
 }
 
 .tree-node.right .node-circle {
-  left: -8px;
+  left: -75px;
+}
+
+.node-date {
+  position: absolute;
+  top: 30px;
+  font-size: 0.85rem;
+  color: #86868b;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.tree-node.left .node-date {
+  right: -190px;
+  text-align: left;
+}
+
+.tree-node.right .node-date {
+  left: -190px;
+  text-align: right;
 }
 
 .node-content {
   background: white;
-  border-radius: 16px;
+  border-radius: 18px;
   padding: 24px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
-  backdrop-filter: blur(4px);
-  background: rgba(255, 255, 255, 0.85);
-  border: 1px solid rgba(237, 242, 247, 0.8);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #f5f5f7;
 }
 
 .node-content:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-  background: rgba(255, 255, 255, 0.95);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
 }
 
 .node-header {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center; /* Changed from flex-start to center for better vertical alignment */
   margin-bottom: 16px;
-  flex-direction: row;
+  gap: 20px; /* Ensures consistent spacing */
+  /* border-width: 1px; */
+  /* border-style: solid; */
 }
 
-.tree-node.left .node-header {
-  flex-direction: row-reverse;
+.header-text {
+  flex: 1; /* Takes up remaining space */
+  min-width: 0; /* Prevents overflow issues */
+}
+
+
+.node-organization {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  color: #1d1d1f;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
 }
 
 .node-title {
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin: 0;
-  color: #1a202c;
-  letter-spacing: -0.02em;
-}
-
-.node-date {
-  font-size: 0.85rem;
-  color: #718096;
+  font-size: 1rem;
   font-weight: 500;
+  margin: 0;
+  color: #86868b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
 }
 
 .node-image-container {
-    margin: 16px 0;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-    max-height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 80px; /* Slightly reduced from 80px */
+  height: 80px;
+  min-width: 60px; /* Prevents shrinking */
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border: 1px solid #f5f5f7;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .node-image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-    background: #f7fafc;
+  width: 70px; /* Reduced from 70px to match container */
+  height: 70px;
+  object-fit: contain;
 }
-
-.node-image:hover {
-  transform: scale(1.02);
-}
-
 .node-description {
   font-size: 0.95rem;
   line-height: 1.6;
-  color: #4a5568;
+  color: #515154;
   margin: 16px 0;
+  text-align: left;
+}
+
+.node-skills {
+  margin-top: 16px;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-pill {
+  background-color: #f5f5f7;
+  color: #515154;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
 }
 
 .node-projects {
@@ -140,10 +187,11 @@
 }
 
 .projects-title {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
   margin-bottom: 8px;
-  color: #1a202c;
+  color: #1d1d1f;
+  
 }
 
 .projects-list {
@@ -153,42 +201,68 @@
 
 .project-item {
   margin-bottom: 6px;
-  color: #4a5568;
+  color: #515154;
   line-height: 1.5;
   font-size: 0.9rem;
+  text-align: left;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .tree-line {
-    left: 30px;
+    left: 40px;
   }
   
   .tree-node {
-    width: calc(100% - 60px);
+    width: calc(100% - 80px);
     left: 0;
-    padding-right: 0;
-    padding-left: 60px;
-    text-align: left;
+    padding: 0 0 0 60px;
   }
   
   .tree-node.left, .tree-node.right {
     left: 0;
-    padding-right: 0;
-    padding-left: 60px;
-    text-align: left;
+    padding: 0 0 0 60px;
   }
   
   .node-circle {
-    left: 22px !important;
+    left: 30px !important;
     right: auto !important;
   }
   
-  .node-header {
-    flex-direction: row !important;
+  .node-date {
+    position: static;
+    display: block;
+    margin-top: 8px;
+    text-align: left !important;
   }
   
-  .node-image {
-    max-width: 100%;
+  .tree-node.left .node-date,
+  .tree-node.right .node-date {
+    right: auto;
+    left: auto;
+    text-align: left;
   }
+}
+
+/* Experience.css additions */
+.experience-page {
+  padding: 60px 20px;
+}
+
+.experience-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.experience-container h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1d1d1f;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #86868b;
+  margin-bottom: 40px;
 }
