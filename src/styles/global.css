@@ -1,0 +1,88 @@
+:root {
+  --accent: #0071e3;
+  --accent-hover: #147ce6;
+  --text-primary: #1d1d1f;
+  --text-secondary: #86868b;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f7;
+  --border-radius: 18px;
+  --nav-height: 72px;
+}
+
+/* Reset & Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 
+               'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: var(--text-primary);
+  background: linear-gradient(to bottom, #ffffff, #f5f5f7);
+  line-height: 1.6;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  opacity: 0;
+  animation: fadeIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+
+
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+  
+  header p {
+    font-size: 1.1rem;
+  }
+  
+  .nav-links {
+    gap: 1.5rem;
+  }
+  
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    gap: 1rem;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  .profile-image {
+    width: 120px;
+    height: 120px;
+  }
+}
