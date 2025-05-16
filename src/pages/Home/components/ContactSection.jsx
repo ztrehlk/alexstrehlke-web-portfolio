@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/ContactSection.css'; 
 
 function ContactSection() {
   return (
@@ -9,7 +10,7 @@ function ContactSection() {
           Email
         </a>
         <a
-          href="https://linkedin.com/in/alexstrehlke"
+          href="https://www.linkedin.com/in/alex-s-a09452133/"
           target="_blank"
           rel="noreferrer"
           className="contact-btn"

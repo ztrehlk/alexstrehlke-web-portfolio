@@ -1,7 +1,8 @@
 import React from 'react';
-import HeaderSection from './HeaderSection';
-import HighlightsSection from './HighlightsSection';
-import ContactSection from './ContactSection';
+import HeaderSection from './components/HeaderSection';
+import HighlightsSection from './components/HighlightsSection';
+import ContactSection from './components/ContactSection';
+import './styles/Home.css'; // Import the CSS file for Home component
 
 function Home() {
   return (

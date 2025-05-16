@@ -1,0 +1,8 @@
+/* Main Content */
+main {
+  margin-top: var(--nav-height);
+  /* padding: 5rem 2rem 4rem; */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+

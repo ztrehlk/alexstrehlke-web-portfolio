@@ -1,0 +1,42 @@
+/* Contact Section */
+#contact {
+  margin-bottom: 4rem;
+}
+.contact-btn {
+  min-width: 160px;
+  text-align: center;
+  box-sizing: border-box;
+}
+#contact h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  letter-spacing: -0.4px;
+  color: var(--text-primary);
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.contact-btn {
+  padding: 0.75rem 1.8rem;
+  border-radius: 50px;
+  background: var(--accent);
+  color: white;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s cubic-bezier(0.16, 0.84, 0.44, 1);
+  border: 1px solid var(--accent);
+  text-decoration: none;
+}
+
+.contact-btn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 113, 227, 0.15);
+}
