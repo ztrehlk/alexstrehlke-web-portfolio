@@ -5,6 +5,8 @@ import nomuraLogo from './assets/images/nomura.png';
 import kubrickLogo from './assets/images/kubrick.png';
 import oregonLogo from './assets/images/oregon.png';
 import fortisLogo from './assets/images/fortis.png';
+import covidPdf from './assets/files/The Effect of COVID-19 on Domestic Crime.pdf';
+import healthInsurancePdf from './assets/files/Observing the Impact of Individual Characteristics on access to Employer Sponsored Health Insurance.pdf';
 
 const experiences = [
   {
@@ -44,8 +46,14 @@ const experiences = [
     image: oregonLogo,
     // skills: ["Economics", "Data Analysis", "Machine Learning"],
     projects: [
-      "The Effect of COVID-19 on Domestic Crime: An Analysis of School Closure and Mitigating Effects",
-      "Observing the Impact of Individual Characteristics on access to Employer Sponsored Health Insurance"
+      {
+        title: "The Effect of COVID-19 on Domestic Crime: An Analysis of School Closure and Mitigating Effects",
+        pdf: covidPdf
+      },
+      {
+        title: "Observing the Impact of Individual Characteristics on access to Employer Sponsored Health Insurance",
+        pdf: healthInsurancePdf
+      }
     ]
   }
 ];

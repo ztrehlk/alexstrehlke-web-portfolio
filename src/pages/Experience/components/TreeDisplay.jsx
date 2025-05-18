@@ -42,16 +42,25 @@ const TreeDisplay = ({ experiences }) => {
               </div>
             )}
             
-            {exp.projects && (
-              <div className="node-projects">
-                <h4 className="projects-title">Key Projects</h4>
-                <ul className="projects-list">
-                  {exp.projects.map((project, pIndex) => (
-                    <li key={pIndex} className="project-item">{project}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
+          {exp.projects && (
+            <div className="node-projects">
+              <h4 className="projects-title">Key Projects</h4>
+              <ul className="projects-list">
+                {exp.projects.map((project, pIndex) => (
+                  <li key={pIndex} className="project-item">
+                    <a 
+                      href={project.pdf} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="project-link"
+                    >
+                      {project.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
           </div>
           <div className="node-circle">
             <div className="node-circle-inner"></div>

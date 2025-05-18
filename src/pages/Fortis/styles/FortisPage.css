@@ -1,0 +1,292 @@
+/* Base Styles */
+.fortis-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header Styles */
+.fortis-header {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 0 40px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.logo {
+  width: 200px;
+  /* margin-bottom: 20px; */
+}
+
+.header-content {
+  text-align: center;
+  margin-bottom: 40px;
+  max-width: 700px;
+}
+
+.header-content h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.header-description {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #444;
+}
+
+.app-link {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #000;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.app-link:hover {
+  background-color: #333;
+}
+
+.header-image {
+  max-width: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); */
+}
+
+.header-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Project Overview */
+.project-overview {
+  padding: 60px 0;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.project-overview h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.overview-content {
+  display: flex;
+  gap: 60px;
+}
+
+.overview-text {
+  flex: 2;
+}
+
+.overview-text p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.tech-stack {
+  flex: 1;
+}
+
+.tech-stack h3 {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.tech-stack ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.tech-stack li {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* Key Features */
+.key-features {
+  padding: 60px 0;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.key-features h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.feature-card {
+  padding: 25px;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.feature-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.feature-card p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.read-more {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+.section-footer {
+  text-align: center;
+}
+
+.view-all {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.2s;
+}
+
+.view-all:hover {
+  background-color: #f8f8f8;
+}
+
+/* Development Blog */
+.development-blog {
+  padding: 60px 0;
+}
+
+.development-blog h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.blog-posts {
+  display: grid;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.blog-post {
+  padding: 25px;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+}
+
+.post-date {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.blog-post h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.blog-post p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .overview-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .fortis-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .header-image {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .fortis-header h1 {
+    font-size: 2rem;
+  }
+  
+  .header-description {
+    font-size: 1rem;
+  }
+}

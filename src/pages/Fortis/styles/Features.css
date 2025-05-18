@@ -1,0 +1,158 @@
+/* Vertical Feature List with Tall Images */
+.features-section {
+  padding: 100px 24px;
+  background: #f5f5f7;
+  position: relative;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+}
+
+.features-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.features-headline {
+  font-size: 48px;
+  font-weight: 600;
+  color: #1d1d1f;
+  margin-bottom: 12px;
+  letter-spacing: -0.8px;
+  line-height: 1.1;
+}
+
+.features-subhead {
+  font-size: 24px;
+  color: #86868b;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.features-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  background: white;
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.feature-image-container {
+  flex: 0 0 300px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: linear-gradient(135deg, #f5f5f7 0%, #e8e8ed 100%); */
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.feature-image {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.feature-card:hover .feature-image {
+  transform: scale(1.02);
+}
+
+.feature-content {
+  flex: 1;
+}
+
+.feature-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #1d1d1f;
+  margin-bottom: 16px;
+  letter-spacing: -0.4px;
+}
+
+.feature-desc {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #1d1d1f;
+  margin-bottom: 24px;
+  font-weight: 400;
+}
+
+.feature-details {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #86868b;
+  padding-top: 16px;
+  border-top: 1px solid #f0f0f0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .feature-card {
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 30px;
+  }
+  
+  .feature-image-container {
+    width: 100%;
+    height: 400px;
+    flex: none;
+  }
+  
+  .feature-content {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .features-section {
+    padding: 60px 20px;
+  }
+  
+  .features-headline {
+    font-size: 36px;
+  }
+  
+  .features-subhead {
+    font-size: 20px;
+  }
+  
+  .feature-card {
+    padding: 30px 20px;
+    gap: 30px;
+  }
+  
+  .feature-image-container {
+    height: 350px;
+  }
+  
+  .feature-title {
+    font-size: 24px;
+  }
+  
+  .feature-desc {
+    font-size: 16px;
+  }
+  
+  .feature-details {
+    font-size: 15px;
+  }
+}
