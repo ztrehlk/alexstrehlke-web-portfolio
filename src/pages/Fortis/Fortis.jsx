@@ -43,7 +43,7 @@ const Fortis = () => {
     <div className="fortis-container">
       <header className="fortis-header">
         <div className="header-content">
-            <img src={fortisBanner} alt="Fortis Logo" className="logo" />
+            <img src={fortisBanner} alt="Fortis Logo" className="fortis-logo" />
           {/* <h1>Fortis</h1> */}
           <p className="subtitle">Social Workout Log & Tracker</p>
           <p className="header-description">
@@ -72,7 +72,7 @@ const Fortis = () => {
             </p>
             <div className="stats-grid">
               <div className="stat-item">
-                <span className="stat-number">450+</span>
+                <span className="stat-number">500+</span>
                 <span className="stat-label">Users</span>
               </div>
               <div className="stat-item">
@@ -105,29 +105,19 @@ const Fortis = () => {
             <div className="feature-card" key={index}>
               <h3>{feature.title}</h3>
               <p>{feature.desc}</p>
-              <a href="#" className="read-more">Learn more →</a>
+              {/* <a href="#" className="read-more">Learn more →</a> */}
             </div>
           ))}
         </div>
         <div className="section-footer">
-          <a href="#" className="view-all">View All Features</a>
+          {/* <a href="#" className="view-all">View All Features</a> */}
         </div>
       </section>
 
       <section className="development-blog">
         <h2>Development Journey</h2>
-        <div className="blog-posts">
-          {blogPosts.map((post, index) => (
-            <div className="blog-post" key={index}>
-              <div className="post-date">{post.date}</div>
-              <h3>{post.title}</h3>
-              <p>{post.excerpt}</p>
-              <a href="#" className="read-more">Continue reading →</a>
-            </div>
-          ))}
-        </div>
-        <div className="section-footer">
-          <a href="#" className="view-all">View All Posts</a>
+        <div className="coming-soon-message" style={{ textAlign: 'center', padding: '2rem', fontSize: '1.2rem', color: '#888' }}>
+          I have a few write-ups in the works about Fortis—coming soon!
         </div>
       </section>
     </div>

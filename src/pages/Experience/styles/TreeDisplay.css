@@ -151,8 +151,8 @@
 }
 
 .node-image {
-  width: 70px; /* Reduced from 70px to match container */
-  height: 70px;
+  width: 80px; /* Reduced from 70px to match container */
+  height: 80px;
   object-fit: contain;
 }
 .node-description {

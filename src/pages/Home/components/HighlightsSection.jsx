@@ -36,12 +36,12 @@ function HighlightsSection() {
         </div>
         <div className="card">
           <div className="card-image-container">
-            <img src={projectsImg} alt="Other Projects" className="card-image" />
+            <img src={projectsImg} alt="About" className="card-image" />
           </div>
           <div className="card-content">
-            <h3>Projects</h3>
-            <p>Side projects, open-source contributions, and tangents.</p>
-            <a href="/projects">Learn More</a>
+            <h3>About</h3>
+            <p>A brief background about myself.</p>
+            <a href="/about">Learn More</a>
           </div>
         </div>
       </div>

@@ -18,9 +18,11 @@
   border-bottom: 1px solid #eaeaea;
 }
 
-.logo {
+.fortis-logo {
   width: 200px;
-  /* margin-bottom: 20px; */
+  background-color: transparent !important;
+  box-shadow: none           !important;
+  border-radius: 0           !important;
 }
 
 .header-content {
@@ -39,11 +41,12 @@
 .subtitle {
   font-size: 1.25rem;
   color: #666;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .header-description {
   font-size: 1.1rem;
+  margin-top: 20px;
   margin-bottom: 30px;
   color: #444;
 }

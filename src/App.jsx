@@ -7,10 +7,12 @@ import Experience from './pages/Experience/Experience';
 import Fortis from './pages/Fortis/Fortis';
 import Projects from './pages/Projects/Projects';
 import About from './pages/About/About';
+import ScrollToTop from './components/ScrollToTop'; 
 
 function App() {
   return (
     <Router>
+      <ScrollToTop /> {/* ✅ Add this line */}
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -18,7 +20,6 @@ function App() {
         <Route path="/fortis" element={<Fortis />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/about" element={<About />} />
-        {/* Add more routes as needed */}
       </Routes>
       <Footer />
     </Router>
