@@ -4,6 +4,7 @@ import '../styles/HighlightsSection.css';
 import fortisImg from '../../../../public/assets/images/fortis image.png';
 import workExperienceImg from '../../../../public/assets/images/work exp 3.png';
 import projectsImg from '../../../../public/assets/images/iso img.png';
+import { Link } from 'react-router-dom';
 
 function HighlightsSection() {
 
@@ -21,7 +22,7 @@ function HighlightsSection() {
           <div className="card-content">
             <h3>Experience</h3>
             <p>A quick tour of my roles and experience in data.</p>
-            <a href="/experience">Learn More</a>
+            <Link classname="" to="/experience">Learn More</Link>
           </div>
         </div>
         <div className="card">
@@ -31,7 +32,7 @@ function HighlightsSection() {
           <div className="card-content">
             <h3>Fortis</h3>
             <p>A social workout app I built with React Native, Django, and AWS.</p>
-            <a href="/fortis">Learn More</a>
+            <Link to="/fortis">Learn More</Link>
           </div>
         </div>
         <div className="card">
@@ -41,7 +42,7 @@ function HighlightsSection() {
           <div className="card-content">
             <h3>About</h3>
             <p>A brief background about myself.</p>
-            <a href="/about">Learn More</a>
+            <Link to="/about">Learn More</Link>
           </div>
         </div>
       </div>
