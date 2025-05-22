@@ -11,7 +11,7 @@ import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
-    <Router basename="/alexstrehlke-web-portfolio">
+    <Router basename="/">
       <ScrollToTop /> {/* ✅ Add this line */}
       <Navbar />
       <Routes>
