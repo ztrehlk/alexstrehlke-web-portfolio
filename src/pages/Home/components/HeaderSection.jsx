@@ -3,7 +3,7 @@
 import React from 'react';
 import DataFlowVisualization from './DataFlowVisualization';
 import ProfileOverlay from './ProfileOverlay';
-import profileImg from '../../../../public/assets/images/portfolioProfile.png';
+import profileImg from '../../../assets/images/portfolioProfile.png';
 
 const HeaderSection = () => {
   return (
