@@ -3,6 +3,7 @@
 import React from 'react';
 import DataFlowVisualization from './DataFlowVisualization';
 import ProfileOverlay from './ProfileOverlay';
+import profileImg from '../../../../public/assets/images/portfolioProfile.png';
 
 const HeaderSection = () => {
   return (
@@ -28,7 +29,7 @@ const HeaderSection = () => {
         description="Welcome! This space showcases my work across data, tech, and software
           development—along with a few side projects and experiments I'm excited
           about."
-        imageUrl="../../../assets/images/portfolioProfile.png"
+        imageUrl={profileImg}
       />
     </div>
   );
