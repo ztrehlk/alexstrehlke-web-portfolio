@@ -1,37 +1,53 @@
+import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 
 function Navbar() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileView, setIsMobileView] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileView(window.innerWidth < 768);
+      if (window.innerWidth >= 768) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <nav>
       <div className="logo">Alex Strehlke</div>
-      <div className="nav-links">
-        <NavLink to="/" end>Home</NavLink>
-        <NavLink to="/experience">Experience</NavLink>
-
-        {/* Modern dropdown with clickable parent link */}
-        <div className="dropdown">
-          <NavLink 
-            to="/fortis" 
-            end 
-            className="dropdown-toggle"
-          >
-            Fortis
-            {/* <svg className="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M6 9l6 6 6-6"/>
-            </svg> */}
-          </NavLink>
-          {/* <div className="dropdown-content">
-            <div className="dropdown-inner">
-              <NavLink to="/fortis">Overview</NavLink>
-              <NavLink to="/fortis/features">Key Features</NavLink>
-              <NavLink to="/fortis/blog">Blog Posts</NavLink>
-            </div>
-          </div> */}
-        </div>
-
-        {/* <NavLink to="/projects">Projects</NavLink> */}
-        <NavLink to="/about">About</NavLink>
+      
+      {/* Mobile menu button - always visible on mobile */}
+      <button 
+        className={`mobile-menu-button ${isMobileView ? 'visible' : ''}`} 
+        onClick={toggleMobileMenu}
+        aria-label="Toggle menu"
+      >
+        <span className={`menu-line ${isMobileMenuOpen ? 'open' : ''}`}></span>
+        <span className={`menu-line ${isMobileMenuOpen ? 'open' : ''}`}></span>
+      </button>
+      
+      {/* Navigation links - hidden on mobile when menu is closed */}
+      <div className={`nav-links ${isMobileView ? (isMobileMenuOpen ? 'mobile-open' : 'mobile-closed') : ''}`}>
+        <NavLink to="/" end onClick={() => setIsMobileMenuOpen(false)}>Home</NavLink>
+        <NavLink to="/experience" onClick={() => setIsMobileMenuOpen(false)}>Experience</NavLink>
+        <NavLink to="/fortis" onClick={() => setIsMobileMenuOpen(false)}>Fortis</NavLink>
+        <NavLink to="/about" onClick={() => setIsMobileMenuOpen(false)}>About</NavLink>
       </div>
+      
+      {/* Overlay for mobile menu */}
+      {isMobileMenuOpen && isMobileView && (
+        <div className="mobile-menu-overlay" onClick={toggleMobileMenu}></div>
+      )}
     </nav>
   );
 }
